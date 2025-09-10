@@ -1,4 +1,4 @@
-import profileImage from '@assets/generated_images/Professional_consultant_headshot_12f318ec.png';
+import profileImage from '@assets/50b785f7732240bb9616be93c9d2c3a0e9ec73903044452a8c56b5288bd87cf5_1757522652032.jpeg';
 
 interface HeaderProps {
   onContactClick: () => void;
