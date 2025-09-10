@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 
 export default function BookingSection() {
   return (
-    <section id="foglalas" className="py-8 flex justify-center">
+    <section id="foglalas" className="py-8 flex flex-col items-center space-y-2">
       <h2 className="sr-only">Foglalás</h2>
       <Button 
         asChild 
@@ -19,6 +19,9 @@ export default function BookingSection() {
           Beszéljünk!
         </a>
       </Button>
+      <p className="text-sm text-muted-foreground" data-testid="text-consultation-info">
+        30 perces ingyenes konzultáció foglalása
+      </p>
     </section>
   );
 }

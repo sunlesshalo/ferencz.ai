@@ -3,13 +3,22 @@ export default function ServicesSection() {
     {
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 inline mr-1">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73z"/>
+        </svg>
+      ),
+      title: "AI‑bevezetés",
+      description: "üzleti célok, mérőszámok, pilot → produkció."
+    },
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 inline mr-1">
           <circle cx="12" cy="12" r="10"/>
           <circle cx="12" cy="12" r="6"/>
           <circle cx="12" cy="12" r="2"/>
         </svg>
       ),
       title: "Prompt‑stratégia & tréning",
-      description: "hatékony kérések, workflowk és sablonok GPT‑5‑höz."
+      description: "hatékony utasítások, workflowk és sablonok ChatGPT-hez, Claude.ai-hoz és Gemini-hez"
     },
     {
       icon: (
@@ -19,16 +28,7 @@ export default function ServicesSection() {
         </svg>
       ),
       title: "Automatizálás",
-      description: "n8n / Make, Google Sheets, WooCommerce, Stripe, Help Scout."
-    },
-    {
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 inline mr-1">
-          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73z"/>
-        </svg>
-      ),
-      title: "AI‑bevezetés",
-      description: "üzleti célok, mérőszámok, pilot → produkció."
+      description: "sales folyamatok, ügyfélszolgálat, marketing jelentések, tartalomgyártás, kimutatások, dashboardok"
     },
     {
       icon: (
@@ -40,7 +40,7 @@ export default function ServicesSection() {
         </svg>
       ),
       title: "Mini eszközök",
-      description: "micro‑SaaS és belső toolok, gyors eredményekre."
+      description: "micro‑SaaS és belső toolok, gyors implementáció"
     }
   ];
 
