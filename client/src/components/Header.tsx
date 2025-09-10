@@ -52,7 +52,7 @@ export default function Header({ onContactClick }: HeaderProps) {
             </button>
           </nav>
         </div>
-        <p className="text-sm text-muted-foreground leading-relaxed font-semibold" data-testid="text-description">
+        <p className="text-sm text-muted-foreground leading-relaxed font-medium" data-testid="text-description">
           A stratégiai partnered az AI‑bevezetésben: prompt‑stratégiától az automatizálásokon át az AI‑munkafolyamatok bevezetéséig — üzleti célok alapján, mérhető ROI‑val, a pilottól a skálázható megoldásokig.
         </p>
       </div>
