@@ -380,19 +380,29 @@
   }
 
   .animated-bg::before {
-    background: radial-gradient(circle at center, rgba(56,189,248,0.30) 0%, rgba(56,189,248,0) 60%);
-    background: radial-gradient(circle at center, hsl(var(--bg-anim-a) / 0.25) 0%, transparent 60%);
-    top: -200px;
-    right: -200px;
-    animation: floatA 75s ease-in-out infinite alternate;
+    background: rgba(56,189,248,0.30);
+    top: 15%;
+    left: 60%;
+    right: auto;
+    bottom: auto;
+    animation: none;
+    transform: none;
+    box-shadow: 0 0 0 2px magenta inset;
+    width: 600px;
+    height: 600px;
   }
 
   .animated-bg::after {
-    background: radial-gradient(circle at center, rgba(245,158,11,0.22) 0%, rgba(245,158,11,0) 60%);
-    background: radial-gradient(circle at center, hsl(var(--bg-anim-b) / 0.18) 0%, transparent 60%);
-    bottom: -200px;
-    left: -200px;
-    animation: floatB 90s ease-in-out infinite alternate;
+    background: rgba(245,158,11,0.22);
+    top: 60%;
+    left: 10%;
+    right: auto;
+    bottom: auto;
+    animation: none;
+    transform: none;
+    box-shadow: 0 0 0 2px magenta inset;
+    width: 600px;
+    height: 600px;
   }
 
   /* Respect user preference for reduced motion */
