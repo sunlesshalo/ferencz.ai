@@ -8,7 +8,7 @@ export default function BookingSection() {
         asChild 
         variant="default"
         size="lg"
-        className="hover-elevate"
+        className="hover-elevate shadow-sm px-8 py-3"
         data-testid="button-booking"
       >
         <a 
