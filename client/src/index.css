@@ -76,6 +76,10 @@
   --chart-4: 160 60% 45%;
   --chart-5: 10 80% 55%;
 
+  /* Animated background colors */
+  --bg-anim-a: 220 60% 70%;
+  --bg-anim-b: 45 65% 75%;
+
   --font-sans: Inter, "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: "Times New Roman", Times, serif;
   --font-mono: "Fira Code", "Consolas", "Monaco", "Courier New", monospace;
@@ -194,6 +198,10 @@
   --chart-3: 280 60% 70%;
   --chart-4: 160 60% 65%;
   --chart-5: 10 80% 65%;
+
+  /* Animated background colors - darker, less saturated for dark mode */
+  --bg-anim-a: 220 30% 35%;
+  --bg-anim-b: 45 35% 40%;
 
   --shadow-2xs: 0px 1px 2px 0px hsl(220 25% 3% / 0.3);
   --shadow-xs: 0px 1px 2px 0px hsl(220 25% 3% / 0.4);
@@ -325,5 +333,79 @@
   .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
+  }
+
+  /* Animated background - Perplexity-inspired subtle gradient blobs */
+  @keyframes floatA {
+    0%, 100% {
+      transform: translate(-20%, -20%) scale(1);
+    }
+    33% {
+      transform: translate(-35%, -15%) scale(1.1);
+    }
+    66% {
+      transform: translate(-15%, -35%) scale(0.9);
+    }
+  }
+
+  @keyframes floatB {
+    0%, 100% {
+      transform: translate(20%, 20%) scale(0.9);
+    }
+    33% {
+      transform: translate(35%, 15%) scale(1.1);
+    }
+    66% {
+      transform: translate(15%, 35%) scale(1);
+    }
+  }
+
+  .animated-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .animated-bg::before,
+  .animated-bg::after {
+    content: "";
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    will-change: transform;
+  }
+
+  .animated-bg::before {
+    background: radial-gradient(circle at center, hsl(var(--bg-anim-a) / 0.12) 0%, transparent 60%);
+    top: -200px;
+    right: -200px;
+    animation: floatA 75s ease-in-out infinite alternate;
+  }
+
+  .animated-bg::after {
+    background: radial-gradient(circle at center, hsl(var(--bg-anim-b) / 0.08) 0%, transparent 60%);
+    bottom: -200px;
+    left: -200px;
+    animation: floatB 90s ease-in-out infinite alternate;
+  }
+
+  /* Respect user preference for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .animated-bg::before,
+    .animated-bg::after {
+      animation: none;
+    }
+  }
+
+  /* Reduce opacity in dark mode for subtlety */
+  .dark .animated-bg::before {
+    background: radial-gradient(circle at center, hsl(var(--bg-anim-a) / 0.08) 0%, transparent 60%);
+  }
+
+  .dark .animated-bg::after {
+    background: radial-gradient(circle at center, hsl(var(--bg-anim-b) / 0.06) 0%, transparent 60%);
   }
 }
