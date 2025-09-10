@@ -15,7 +15,7 @@ export default function Home() {
         <ThemeToggle />
       </div>
       
-      <main className="max-w-2xl mx-auto px-5 py-16 space-y-12">
+      <main className="max-w-2xl mx-auto px-5 py-16 space-y-9">
         <Header onContactClick={() => setIsContactModalOpen(true)} />
         <BookingSection />
         <ServicesSection />
