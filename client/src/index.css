@@ -361,11 +361,12 @@
   }
 
   .animated-bg {
-    position: absolute;
+    position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: 0;
     overflow: hidden;
+    outline: 2px dashed magenta; /* Temporary debug - will remove */
   }
 
   .animated-bg::before,
@@ -379,6 +380,7 @@
   }
 
   .animated-bg::before {
+    background: radial-gradient(circle at center, rgba(56,189,248,0.30) 0%, rgba(56,189,248,0) 60%);
     background: radial-gradient(circle at center, hsl(var(--bg-anim-a) / 0.25) 0%, transparent 60%);
     top: -200px;
     right: -200px;
@@ -386,6 +388,7 @@
   }
 
   .animated-bg::after {
+    background: radial-gradient(circle at center, rgba(245,158,11,0.22) 0%, rgba(245,158,11,0) 60%);
     background: radial-gradient(circle at center, hsl(var(--bg-anim-b) / 0.18) 0%, transparent 60%);
     bottom: -200px;
     left: -200px;
@@ -402,10 +405,12 @@
 
   /* Reduce opacity in dark mode for subtlety */
   .dark .animated-bg::before {
+    background: radial-gradient(circle at center, rgba(56,189,248,0.18) 0%, rgba(56,189,248,0) 60%);
     background: radial-gradient(circle at center, hsl(var(--bg-anim-a) / 0.18) 0%, transparent 60%);
   }
 
   .dark .animated-bg::after {
+    background: radial-gradient(circle at center, rgba(245,158,11,0.15) 0%, rgba(245,158,11,0) 60%);
     background: radial-gradient(circle at center, hsl(var(--bg-anim-b) / 0.12) 0%, transparent 60%);
   }
 }
