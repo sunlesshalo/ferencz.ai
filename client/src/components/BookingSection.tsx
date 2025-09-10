@@ -1,31 +1,23 @@
+import { Button } from '@/components/ui/button';
+
 export default function BookingSection() {
   return (
-    <section id="foglalas" className="space-y-1 text-sm">
+    <section id="foglalas">
       <h2 className="sr-only">Foglalás</h2>
-      <p>
+      <Button 
+        asChild 
+        variant="outline"
+        className="hover-elevate"
+        data-testid="button-booking"
+      >
         <a 
           href="https://cal.com/ferencz-csuszner/30min" 
           target="_blank" 
-          rel="noopener" 
-          className="hover:underline"
-          data-testid="link-booking-free"
+          rel="noopener"
         >
-          Ingyenes 30 perc
-        </a> 
-        — ismerkedés, iránykijelölés
-      </p>
-      <p>
-        <a 
-          href="https://cal.com/ferencz-csuszner/konzultacio" 
-          target="_blank" 
-          rel="noopener" 
-          className="hover:underline"
-          data-testid="link-booking-paid"
-        >
-          Fizetős 60 perc
-        </a> 
-        — konkrét feladat megoldása
-      </p>
+          Beszéljünk!
+        </a>
+      </Button>
     </section>
   );
 }
