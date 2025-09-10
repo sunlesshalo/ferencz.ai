@@ -6,14 +6,14 @@ interface HeaderProps {
 
 export default function Header({ onContactClick }: HeaderProps) {
   return (
-    <header className="flex items-start gap-4">
+    <header className="flex items-start gap-6">
       <img 
         src={profileImage} 
         alt="Profilkép" 
         className="w-24 h-24 rounded-full object-cover flex-shrink-0"
         data-testid="img-profile"
       />
-      <div className="space-y-3 flex-1">
+      <div className="space-y-4 flex-1">
         <div className="flex items-center gap-3 flex-wrap">
           <h1 className="text-2xl font-bold tracking-tight" data-testid="text-name">
             Csuszner Ferencz

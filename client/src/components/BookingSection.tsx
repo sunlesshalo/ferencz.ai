@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 
 export default function BookingSection() {
   return (
-    <section id="foglalas">
+    <section id="foglalas" className="py-8 flex justify-center">
       <h2 className="sr-only">Foglalás</h2>
       <Button 
         asChild 
