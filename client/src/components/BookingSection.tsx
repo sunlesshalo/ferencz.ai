@@ -19,7 +19,7 @@ export default function BookingSection() {
           Beszéljünk!
         </a>
       </Button>
-      <p className="text-sm text-muted-foreground" data-testid="text-consultation-info">
+      <p className="text-sm text-muted-foreground text-center max-w-[160px] leading-tight" data-testid="text-consultation-info">
         30 perces ingyenes konzultáció foglalása
       </p>
     </section>
