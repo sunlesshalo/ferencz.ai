@@ -18,7 +18,7 @@ export default function ServicesSection() {
         </svg>
       ),
       title: "Prompt‑stratégia & tréning",
-      description: "hatékony kérések, workflowk és sablonok GPT‑5‑höz."
+      description: "hatékony struktúrák, workflowk és sablonok."
     },
     {
       icon: (
