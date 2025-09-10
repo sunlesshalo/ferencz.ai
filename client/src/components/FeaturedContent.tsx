@@ -1,7 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import { useCallback, useEffect, useState } from 'react';
-import type { CarouselApi } from '@/components/ui/carousel';
+import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';
 
 const featuredContent = [
   {
@@ -42,27 +41,6 @@ const featuredContent = [
 ];
 
 export default function FeaturedContent() {
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
-
-    api.on('select', () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
-  }, [api]);
-
-  const scrollTo = useCallback((index: number) => {
-    api?.scrollTo(index);
-  }, [api]);
-
   return (
     <section id="kiemelt-tartalom" className="space-y-6">
       <h2 className="text-xl font-bold tracking-tight" data-testid="heading-featured">
@@ -70,93 +48,79 @@ export default function FeaturedContent() {
       </h2>
       
       <div className="space-y-4">
-        <div className="relative">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-            setApi={setApi}
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {featuredContent.map((content, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2">
-                  <Card className="hover-elevate overflow-hidden" data-testid={`card-${content.type}-${index}`}>
-                    <a 
-                      href={content.url} 
-                      target="_blank" 
-                      rel="noopener"
-                      className="block"
-                    >
-                      <div className="aspect-video w-full bg-muted relative overflow-hidden">
-                        <img
-                          src={content.image}
-                          alt={content.title}
-                          className="w-full h-full object-cover"
-                          data-testid={`img-${content.type}-thumbnail-${index}`}
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                        {content.type === 'youtube' && (
-                          <div className="absolute bottom-4 right-4 bg-red-600 text-white px-2 py-1 rounded text-xs font-medium">
-                            YouTube
-                          </div>
-                        )}
-                      </div>
-                      <CardContent className="p-4">
-                        <div className="flex items-center gap-2 mb-2">
-                          {content.type === 'substack' ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" className="h-4 w-4 text-muted-foreground">
-                              <path d="M448 32v96H0V32h448zm0 160v96H0v-96h448zM0 352h192v128l-96-48-96 48V352z"/>
-                            </svg>
-                          ) : (
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" className="h-4 w-4 text-red-600">
-                              <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.6 64 288 64 288 64S117.4 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6C16 167 16 256 16 256s0 89 10.3 131.9c6.3 23.7 24.8 42.3 48.3 48.6C117.4 448 288 448 288 448s170.6 0 213.4-11.5c23.5-6.3 42-24.9 48.3-48.6C560 345 560 256 560 256s0-89-10.3-131.9zM232 336V176l144 80-144 80z"/>
-                            </svg>
-                          )}
-                          <span className="text-xs text-muted-foreground">
-                            {content.type === 'substack' ? 'Substack' : 'YouTube'}
-                          </span>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+            watchDrag: true,
+          }}
+          plugins={[WheelGesturesPlugin()]}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {featuredContent.map((content, index) => (
+              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2">
+                <Card className="hover-elevate overflow-hidden" data-testid={`card-${content.type}-${index}`}>
+                  <a 
+                    href={content.url} 
+                    target="_blank" 
+                    rel="noopener"
+                    className="block"
+                  >
+                    <div className="aspect-video w-full bg-muted relative overflow-hidden">
+                      <img
+                        src={content.image}
+                        alt={content.title}
+                        className="w-full h-full object-cover"
+                        data-testid={`img-${content.type}-thumbnail-${index}`}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                      {content.type === 'youtube' && (
+                        <div className="absolute bottom-4 right-4 bg-red-600 text-white px-2 py-1 rounded text-xs font-medium">
+                          YouTube
                         </div>
-                        <h3 className="font-medium text-sm leading-snug line-clamp-3" data-testid={`text-${content.type}-title-${index}`}>
-                          {content.title}
-                        </h3>
-                        <p className="text-xs text-muted-foreground mt-2 line-clamp-2">
-                          {content.description}
-                        </p>
-                      </CardContent>
-                    </a>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
+                      )}
+                    </div>
+                    <CardContent className="p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        {content.type === 'substack' ? (
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" className="h-4 w-4 text-muted-foreground">
+                            <path d="M448 32v96H0V32h448zm0 160v96H0v-96h448zM0 352h192v128l-96-48-96 48V352z"/>
+                          </svg>
+                        ) : (
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" className="h-4 w-4 text-red-600">
+                            <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.6 64 288 64 288 64S117.4 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6C16 167 16 256 16 256s0 89 10.3 131.9c6.3 23.7 24.8 42.3 48.3 48.6C117.4 448 288 448 288 448s170.6 0 213.4-11.5c23.5-6.3 42-24.9 48.3-48.6C560 345 560 256 560 256s0-89-10.3-131.9zM232 336V176l144 80-144 80z"/>
+                          </svg>
+                        )}
+                        <span className="text-xs text-muted-foreground">
+                          {content.type === 'substack' ? 'Substack' : 'YouTube'}
+                        </span>
+                      </div>
+                      <h3 className="font-medium text-sm leading-snug line-clamp-3" data-testid={`text-${content.type}-title-${index}`}>
+                        {content.title}
+                      </h3>
+                      <p className="text-xs text-muted-foreground mt-2 line-clamp-2">
+                        {content.description}
+                      </p>
+                    </CardContent>
+                  </a>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          
+          {/* Arrow Navigation - Centered Below */}
+          <div className="flex justify-center gap-4 mt-4">
             <CarouselPrevious 
-              className="left-0 -translate-x-1/2" 
+              className="static h-8 w-8 translate-x-0 translate-y-0"
               data-testid="button-carousel-previous" 
             />
             <CarouselNext 
-              className="right-0 translate-x-1/2" 
+              className="static h-8 w-8 translate-x-0 translate-y-0"
               data-testid="button-carousel-next" 
             />
-          </Carousel>
-        </div>
-        
-        {/* Dot Navigation */}
-        <div className="flex justify-center gap-2" data-testid="carousel-dots">
-          {Array.from({ length: Math.ceil(featuredContent.length / 2) }).map((_, index) => (
-            <button
-              key={index}
-              onClick={() => scrollTo(index)}
-              className={`h-2 w-2 rounded-full transition-colors hover-elevate ${
-                Math.floor((current - 1) / 2) === index
-                  ? 'bg-foreground'
-                  : 'bg-muted-foreground/30'
-              }`}
-              data-testid={`dot-${index}`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+          </div>
+        </Carousel>
       </div>
     </section>
   );
