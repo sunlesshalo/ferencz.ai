@@ -10,7 +10,7 @@ export default function Header({ onContactClick }: HeaderProps) {
       <img 
         src={profileImage} 
         alt="Profilkép" 
-        className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+        className="w-20 h-20 rounded-full object-cover flex-shrink-0"
         data-testid="img-profile"
       />
       <div className="space-y-3 flex-1">
