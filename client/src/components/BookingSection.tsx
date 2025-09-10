@@ -6,7 +6,7 @@ export default function BookingSection() {
       <h2 className="sr-only">Foglalás</h2>
       <Button 
         asChild 
-        variant="default"
+        variant="outline"
         size="lg"
         className="hover-elevate shadow-sm px-8 py-3"
         data-testid="button-booking"
