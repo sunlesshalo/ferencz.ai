@@ -379,14 +379,14 @@
   }
 
   .animated-bg::before {
-    background: radial-gradient(circle at center, hsl(var(--bg-anim-a) / 0.12) 0%, transparent 60%);
+    background: radial-gradient(circle at center, hsl(var(--bg-anim-a) / 0.25) 0%, transparent 60%);
     top: -200px;
     right: -200px;
     animation: floatA 75s ease-in-out infinite alternate;
   }
 
   .animated-bg::after {
-    background: radial-gradient(circle at center, hsl(var(--bg-anim-b) / 0.08) 0%, transparent 60%);
+    background: radial-gradient(circle at center, hsl(var(--bg-anim-b) / 0.18) 0%, transparent 60%);
     bottom: -200px;
     left: -200px;
     animation: floatB 90s ease-in-out infinite alternate;
@@ -402,10 +402,10 @@
 
   /* Reduce opacity in dark mode for subtlety */
   .dark .animated-bg::before {
-    background: radial-gradient(circle at center, hsl(var(--bg-anim-a) / 0.08) 0%, transparent 60%);
+    background: radial-gradient(circle at center, hsl(var(--bg-anim-a) / 0.18) 0%, transparent 60%);
   }
 
   .dark .animated-bg::after {
-    background: radial-gradient(circle at center, hsl(var(--bg-anim-b) / 0.06) 0%, transparent 60%);
+    background: radial-gradient(circle at center, hsl(var(--bg-anim-b) / 0.12) 0%, transparent 60%);
   }
 }
