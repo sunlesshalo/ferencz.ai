@@ -40,7 +40,7 @@ export default function ServicesSection() {
         </svg>
       ),
       title: "Mini eszközök",
-      description: "micro‑SaaS és belső toolok, gyors eredményekre."
+      description: "micro‑SaaS és belső toolok, gyors implementáció."
     }
   ];
 
