@@ -338,25 +338,25 @@
   /* Animated background - Perplexity-inspired subtle gradient blobs */
   @keyframes floatA {
     0%, 100% {
-      transform: translate(-20%, -20%) scale(1);
+      transform: translate(-10%, -10%) scale(1);
     }
     33% {
-      transform: translate(-35%, -15%) scale(1.1);
+      transform: translate(-15%, -5%) scale(1.1);
     }
     66% {
-      transform: translate(-15%, -35%) scale(0.9);
+      transform: translate(-5%, -15%) scale(0.9);
     }
   }
 
   @keyframes floatB {
     0%, 100% {
-      transform: translate(20%, 20%) scale(0.9);
+      transform: translate(10%, 10%) scale(0.9);
     }
     33% {
-      transform: translate(35%, 15%) scale(1.1);
+      transform: translate(15%, 5%) scale(1.1);
     }
     66% {
-      transform: translate(15%, 35%) scale(1);
+      transform: translate(5%, 15%) scale(1);
     }
   }
 
@@ -366,43 +366,38 @@
     pointer-events: none;
     z-index: 0;
     overflow: hidden;
-    outline: 2px dashed magenta; /* Temporary debug - will remove */
   }
 
   .animated-bg::before,
   .animated-bg::after {
     content: "";
     position: absolute;
-    width: 800px;
-    height: 800px;
     border-radius: 50%;
     will-change: transform;
   }
 
   .animated-bg::before {
-    background: rgba(56,189,248,0.30);
-    top: 15%;
-    left: 60%;
+    background: radial-gradient(circle at center, rgba(56,189,248,0.30) 0%, rgba(56,189,248,0) 60%);
+    background: radial-gradient(circle at center, hsl(var(--bg-anim-a) / 0.25) 0%, transparent 60%);
+    top: 10%;
+    left: 50%;
     right: auto;
     bottom: auto;
-    animation: none;
-    transform: none;
-    box-shadow: 0 0 0 2px magenta inset;
-    width: 600px;
-    height: 600px;
+    animation: floatA 75s ease-in-out infinite alternate;
+    width: 800px;
+    height: 800px;
   }
 
   .animated-bg::after {
-    background: rgba(245,158,11,0.22);
-    top: 60%;
-    left: 10%;
+    background: radial-gradient(circle at center, rgba(245,158,11,0.22) 0%, rgba(245,158,11,0) 60%);
+    background: radial-gradient(circle at center, hsl(var(--bg-anim-b) / 0.18) 0%, transparent 60%);
+    top: 50%;
+    left: 5%;
     right: auto;
     bottom: auto;
-    animation: none;
-    transform: none;
-    box-shadow: 0 0 0 2px magenta inset;
-    width: 600px;
-    height: 600px;
+    animation: floatB 90s ease-in-out infinite alternate;
+    width: 800px;
+    height: 800px;
   }
 
   /* Respect user preference for reduced motion */
