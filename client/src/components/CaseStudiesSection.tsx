@@ -8,14 +8,9 @@ import {
 export default function CaseStudiesSection() {
   return (
     <section className="space-y-6">
-      <div className="space-y-4">
-        <h2 className="text-xl font-semibold" data-testid="text-case-studies-title">
-          Esettanulmányok
-        </h2>
-        <p className="text-muted-foreground" data-testid="text-case-studies-description">
-          Valós példák arra, hogyan segítettem vállalkozásoknak az AI bevezetésével jelentős eredményeket elérni.
-        </p>
-      </div>
+      <h2 className="text-xl font-semibold mb-6" data-testid="text-case-studies-title">
+        Esettanulmányok
+      </h2>
 
       <Accordion type="single" collapsible className="w-full space-y-4" data-testid="accordion-case-studies">
         <AccordionItem value="physiotherapy-clinic" className="border rounded-lg px-6">
@@ -23,7 +18,7 @@ export default function CaseStudiesSection() {
             className="text-left hover:no-underline py-6"
             data-testid="trigger-case-study-physiotherapy"
           >
-            <span className="font-medium">
+            <span className="text-sm">
               Fizioterápiás rendelő értékesítési folyamatának automatizálása – +62% több lead, 83%-kal gyorsabb visszahívás
             </span>
           </AccordionTrigger>
@@ -70,7 +65,7 @@ export default function CaseStudiesSection() {
             className="text-left hover:no-underline py-6"
             data-testid="trigger-case-study-webshop"
           >
-            <span className="font-medium">
+            <span className="text-sm">
               Webáruház rendelési és pénzügyi adatainak központosítása – havi riport napok helyett 10 perc alatt
             </span>
           </AccordionTrigger>
@@ -114,7 +109,7 @@ export default function CaseStudiesSection() {
             className="text-left hover:no-underline py-6"
             data-testid="trigger-case-study-it-blog"
           >
-            <span className="font-medium">
+            <span className="text-sm">
               IT szolgáltató blog tartalomgenerálásának automatizálása – havi 20 órás blogírás 90 percre csökkent
             </span>
           </AccordionTrigger>
