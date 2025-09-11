@@ -112,11 +112,11 @@ export default function FeaturedContent() {
           {/* Arrow Navigation - Centered Below */}
           <div className="flex justify-center gap-4 mt-4">
             <CarouselPrevious 
-              className="static h-8 w-8 translate-x-0 translate-y-0"
+              className="static h-8 w-8 translate-x-0 translate-y-0 push-effect"
               data-testid="button-carousel-previous" 
             />
             <CarouselNext 
-              className="static h-8 w-8 translate-x-0 translate-y-0"
+              className="static h-8 w-8 translate-x-0 translate-y-0 push-effect"
               data-testid="button-carousel-next" 
             />
           </div>

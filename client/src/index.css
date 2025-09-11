@@ -361,4 +361,29 @@
     }
   }
 
+  /* Button push effect - subtle scale down and shadow expansion on hover */
+  .push-effect {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .push-effect:hover {
+    transform: scale(0.96);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark .push-effect:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Respect user preference for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .push-effect {
+      transition: none !important;
+    }
+    .push-effect:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+
 }

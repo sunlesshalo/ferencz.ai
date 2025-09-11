@@ -23,7 +23,7 @@ export default function Header({ onContactClick }: HeaderProps) {
               href="https://ferenczai.substack.com" 
               target="_blank" 
               rel="noopener"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors push-effect"
               data-testid="link-substack"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" className="h-4 w-4">
@@ -34,7 +34,7 @@ export default function Header({ onContactClick }: HeaderProps) {
               href="https://www.youtube.com/@csusznerferencz" 
               target="_blank" 
               rel="noopener"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors push-effect"
               data-testid="link-youtube"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" className="h-4 w-4">
@@ -43,7 +43,7 @@ export default function Header({ onContactClick }: HeaderProps) {
             </a>
             <button 
               onClick={onContactClick}
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors push-effect"
               data-testid="button-contact"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="h-4 w-4">

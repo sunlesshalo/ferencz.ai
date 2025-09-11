@@ -10,7 +10,7 @@ export default function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="hover-elevate"
+      className="hover-elevate push-effect"
       data-testid="button-theme-toggle"
     >
       {theme === 'light' ? (
