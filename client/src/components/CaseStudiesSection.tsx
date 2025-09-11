@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import workflowImage from '@assets/image_1757559033972.png';
 
 export default function CaseStudiesSection() {
   return (
@@ -148,6 +149,15 @@ export default function CaseStudiesSection() {
                   automatizált publikálási ritmus és a szabványosított SEO optimalizálás 
                   <span className="font-semibold text-foreground">45%-kal növelte a weboldaluk organikus forgalmát</span>.
                 </p>
+              </div>
+
+              <div className="mt-6">
+                <img 
+                  src={workflowImage} 
+                  alt="n8n blog automation workflow diagram" 
+                  className="w-full rounded-lg border shadow-sm"
+                  data-testid="img-workflow-diagram"
+                />
               </div>
             </div>
           </AccordionContent>
