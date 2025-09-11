@@ -10,11 +10,11 @@ export default function Header({ onContactClick }: HeaderProps) {
       <img 
         src={profileImage} 
         alt="Profilkép" 
-        className="w-24 h-24 rounded-full object-cover flex-shrink-0"
+        className="w-24 h-24 rounded-full object-cover flex-shrink-0 hero-entrance"
         data-testid="img-profile"
       />
       <div className="space-y-4 flex-1">
-        <div className="flex items-center gap-3 flex-wrap">
+        <div className="flex items-center gap-3 flex-wrap hero-entrance">
           <h1 className="text-2xl font-bold tracking-tight" data-testid="text-name">
             Csuszner Ferencz
           </h1>
@@ -52,7 +52,7 @@ export default function Header({ onContactClick }: HeaderProps) {
             </button>
           </nav>
         </div>
-        <p className="text-sm text-muted-foreground leading-relaxed font-medium" data-testid="text-description">
+        <p className="text-sm text-muted-foreground leading-relaxed font-medium hero-entrance-delayed" data-testid="text-description">
           A stratégiai partnered az AI‑bevezetésben: prompt‑stratégiától az automatizálásokon át az AI‑munkafolyamatok bevezetéséig — üzleti célok alapján, mérhető ROI‑val, a pilottól a skálázható megoldásokig.
         </p>
       </div>
