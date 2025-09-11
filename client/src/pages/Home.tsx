@@ -19,11 +19,11 @@ export default function Home() {
       
       <main className="max-w-2xl mx-auto px-5 py-16 space-y-9">
         <Header onContactClick={() => setIsContactModalOpen(true)} />
-        <BookingSection />
-        <ServicesSection />
-        <CaseStudiesSection />
-        <FeaturedContent />
-        <Footer />
+        <div className="hero-entrance-delayed"><BookingSection /></div>
+        <div className="hero-entrance-delayed"><ServicesSection /></div>
+        <div className="hero-entrance-delayed"><CaseStudiesSection /></div>
+        <div className="hero-entrance-delayed"><FeaturedContent /></div>
+        <div className="hero-entrance-delayed"><Footer /></div>
       </main>
       
       <ContactModal 

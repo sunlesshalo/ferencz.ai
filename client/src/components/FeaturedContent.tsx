@@ -60,7 +60,7 @@ export default function FeaturedContent() {
           <CarouselContent className="-ml-2 md:-ml-4">
             {featuredContent.map((content, index) => (
               <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2">
-                <Card className="hover-elevate card-lift overflow-hidden" data-testid={`card-${content.type}-${index}`}>
+                <Card className="hover-elevate overflow-hidden" data-testid={`card-${content.type}-${index}`}>
                   <a 
                     href={content.url} 
                     target="_blank" 
