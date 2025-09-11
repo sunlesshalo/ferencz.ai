@@ -118,16 +118,17 @@ export default function YouTubeShortsSection() {
             ))}
           </CarouselContent>
           
-          <CarouselPrevious 
-            className="z-20 push-effect"
-            data-testid="button-shorts-carousel-previous"
-            onClick={(e) => e.stopPropagation()}
-          />
-          <CarouselNext 
-            className="z-20 push-effect"
-            data-testid="button-shorts-carousel-next"
-            onClick={(e) => e.stopPropagation()}
-          />
+          {/* Arrow Navigation - Centered Below */}
+          <div className="flex justify-center gap-4 mt-4">
+            <CarouselPrevious 
+              className="static h-8 w-8 translate-x-0 translate-y-0 push-effect"
+              data-testid="button-shorts-carousel-previous"
+            />
+            <CarouselNext 
+              className="static h-8 w-8 translate-x-0 translate-y-0 push-effect"
+              data-testid="button-shorts-carousel-next"
+            />
+          </div>
         </Carousel>
       </div>
     </section>
