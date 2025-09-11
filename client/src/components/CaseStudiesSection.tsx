@@ -14,7 +14,7 @@ export default function CaseStudiesSection() {
       </h2>
 
       <Accordion type="single" collapsible className="w-full space-y-4" data-testid="accordion-case-studies">
-        <AccordionItem value="physiotherapy-clinic" className="border rounded-lg px-6">
+        <AccordionItem value="physiotherapy-clinic" className="border rounded-lg px-6 case-study-item">
           <AccordionTrigger 
             className="text-left hover:no-underline py-6"
             data-testid="trigger-case-study-physiotherapy"
@@ -61,7 +61,7 @@ export default function CaseStudiesSection() {
           </AccordionContent>
         </AccordionItem>
 
-        <AccordionItem value="webshop-data" className="border rounded-lg px-6">
+        <AccordionItem value="webshop-data" className="border rounded-lg px-6 case-study-item">
           <AccordionTrigger 
             className="text-left hover:no-underline py-6"
             data-testid="trigger-case-study-webshop"
@@ -105,7 +105,7 @@ export default function CaseStudiesSection() {
           </AccordionContent>
         </AccordionItem>
 
-        <AccordionItem value="it-blog-automation" className="border rounded-lg px-6">
+        <AccordionItem value="it-blog-automation" className="border rounded-lg px-6 case-study-item">
           <AccordionTrigger 
             className="text-left hover:no-underline py-6"
             data-testid="trigger-case-study-it-blog"
