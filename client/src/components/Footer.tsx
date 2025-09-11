@@ -3,7 +3,7 @@ export default function Footer() {
 
   return (
     <footer className="mt-16 text-xs text-muted-foreground" data-testid="footer">
-      <span>© <span data-testid="text-year">{currentYear}</span> Csuszner Ferencz</span>
+      <span>© <span data-testid="text-year">{currentYear}</span> SC Pine Lines SRL, Str. Horea, Nr. 88-90, Ap. 13, Cluj-Napoca, ROMANIA</span>
     </footer>
   );
 }
