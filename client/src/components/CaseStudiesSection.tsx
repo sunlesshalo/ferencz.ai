@@ -108,6 +108,55 @@ export default function CaseStudiesSection() {
             </div>
           </AccordionContent>
         </AccordionItem>
+
+        <AccordionItem value="it-blog-automation" className="border rounded-lg px-6">
+          <AccordionTrigger 
+            className="text-left hover:no-underline py-6"
+            data-testid="trigger-case-study-it-blog"
+          >
+            <span className="font-medium">
+              IT szolgáltató blog tartalomgenerálásának automatizálása – havi 20 órás blogírás 90 percre csökkent
+            </span>
+          </AccordionTrigger>
+          <AccordionContent className="pb-6 pt-2 space-y-4" data-testid="content-case-study-it-blog">
+            <div className="space-y-4 text-sm leading-relaxed">
+              <div>
+                <h4 className="font-semibold text-foreground mb-2">Probléma:</h4>
+                <p className="text-muted-foreground">
+                  Az IT szolgáltató ügyfelem marketingese havonta 20-25 órát töltött technikai blogbejegyzések 
+                  írásával. Az infrastruktúra trendek, biztonsági frissítések és best practice cikkek manuális 
+                  kutatása, megírása és szerkesztése heti szinten 5-6 órát vett igénybe. A konzisztens technikai 
+                  minőség, SEO optimalizálás és a rendszeres publikálási ütemterv betartása egyedül dolgozva 
+                  folyamatos kihívást jelentett.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="font-semibold text-foreground mb-2">Megoldás:</h4>
+                <p className="text-muted-foreground">
+                  Az n8n platformon specializált blog-generálási workflow-t építettünk, amely automatizálja a 
+                  teljes cikkírási folyamatot IT témákra optimalizálva. A rendszer egy egyszerű témabevitel után 
+                  automatikusan kutat aktuális technológiai forrásokat, iparági híreket és releváns case study-kat, 
+                  strukturált vázlatot készít, majd szakaszról szakaszra megírja a teljes blogbejegyzést. Az AI 
+                  modellek egymásra épülő lépésekben finomítják a technikai tartalmat, biztosítva az olvasható 
+                  nyelvezetet és a szakmai pontosságot.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="font-semibold text-foreground mb-2">Eredmény:</h4>
+                <p className="text-muted-foreground">
+                  A blog tartalom-előállítási idő havi 20+ óráról 90 percre csökkent (
+                  <span className="font-semibold text-foreground">92%-os időmegtakarítás</span>). A marketinges 
+                  a felszabadult 18 órát stratégiai marketing tevékenységekre, lead generálásra és ügyfélelemzésre 
+                  fordíthatja, miközben a blogon továbbra is konzisztens minőségi tartalom jelenik meg. Az 
+                  automatizált publikálási ritmus és a szabványosított SEO optimalizálás 
+                  <span className="font-semibold text-foreground">45%-kal növelte a weboldaluk organikus forgalmát</span>.
+                </p>
+              </div>
+            </div>
+          </AccordionContent>
+        </AccordionItem>
       </Accordion>
     </section>
   );
