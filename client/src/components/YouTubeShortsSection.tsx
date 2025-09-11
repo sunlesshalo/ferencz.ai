@@ -40,13 +40,11 @@ function YouTubeShortItem({ content, index }: { content: any; index: number }) {
     enabled: !!content.videoId
   });
 
-  const fallbackData = { 
+  const displayContent = videoDetails || { 
     title: 'YouTube Short',
     description: 'Loading...',
     thumbnailUrl: `https://img.youtube.com/vi/${content.videoId}/maxresdefault.jpg`
   };
-
-  const displayContent = videoDetails || fallbackData;
 
   return (
     <Card className="hover-elevate overflow-hidden" data-testid={`card-short-${index}`}>

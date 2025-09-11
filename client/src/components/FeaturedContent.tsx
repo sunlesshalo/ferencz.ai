@@ -49,7 +49,11 @@ function YouTubeContentItem({ content, index }: { content: any; index: number })
     enabled: !!content.videoId
   });
 
-  const displayContent = videoDetails || content;
+  const displayContent = videoDetails || {
+    title: content.title,
+    description: content.description,
+    thumbnailUrl: content.image
+  };
 
   return (
     <Card className="hover-elevate overflow-hidden" data-testid={`card-${content.type}-${index}`}>
