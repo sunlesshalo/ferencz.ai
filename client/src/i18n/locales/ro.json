@@ -1,0 +1,58 @@
+{
+  "header": {
+    "name": "Csuszner Ferencz",
+    "description": "Partenerul tău strategic în implementarea AI: de la strategia de prompt-uri prin automatizare până la implementarea fluxurilor de lucru AI—bazat pe obiective de business, cu ROI măsurabil, de la pilot la soluții scalabile."
+  },
+  "booking": {
+    "button": "Hai să vorbim!",
+    "consultation": "Consultație gratuită de 30 de minute"
+  },
+  "services": {
+    "aiImplementation": {
+      "title": "Implementare AI",
+      "description": "obiective de business, metrici, strategie, pilot → producție."
+    },
+    "promptStrategy": {
+      "title": "Strategie Prompt & Training",
+      "description": "structuri eficiente, fluxuri de lucru și șabloane."
+    },
+    "automation": {
+      "title": "Automatizare",
+      "description": "n8n / Make, Google Sheets, WooCommerce, Stripe, Help Scout."
+    },
+    "miniTools": {
+      "title": "Mini Instrumente",
+      "description": "micro-SaaS și instrumente interne, implementare rapidă."
+    }
+  },
+  "caseStudies": {
+    "title": "Studii de Caz",
+    "physiotherapy": {
+      "title": "Automatizarea procesului de vânzare al unui cabinet de fizioterapie – +62% mai multe lead-uri, apeluri de returnare cu 83% mai rapide",
+      "problem": "Problema:",
+      "problemText": "Recepționerii gestionau manual solicitările din reclame. Apelurile de returnare aveau o întârziere medie de 45-60 de minute, rezultând în pierderea de lead-uri în timp ce administrarea consuma prea mult timp.",
+      "solution": "Soluție:",
+      "solutionText": "Sistemul înregistrează automat datele lead-urilor, trimițând notificări instant recepționerilor și confirmare clienților potențiali. Recepționerii înregistrează starea apelurilor. Sistemul programează follow-up-uri când este necesar. Managerul clinicii monitorizează timpul de răspuns și ratele de conversie în timp real. Toate alimentate de două integrări Make.com, două foi Google Sheets și cod Google Apps Script care conectează fără probleme formularele, notificările și follow-up-urile.",
+      "result": "Rezultat:",
+      "resultText": "Lead-urile au crescut cu 62%, timpul de returnare a apelurilor a scăzut de la 48 la 8 minute (îmbunătățire de 83%), în timp ce sarcina administrativă a recepționerilor a scăzut cu 80%."
+    },
+    "webshop": {
+      "title": "Centralizarea datelor de comenzi și financiare e-commerce – rapoarte lunare în 10 minute în loc de zile",
+      "problem": "Problema:",
+      "problemText": "Magazinul online colecta date de comenzi și financiare din mai multe sisteme—WooCommerce, Stripe și transferuri bancare—pentru contabilitate la sfârșitul lunii. Colectarea manuală a datelor și reconcilierea anterioare durau câteva zile și adesea rezultau în erori.",
+      "solution": "Soluție:",
+      "solutionText": "Am înlocuit procesul cu automatizări Make.com: comenzile WooCommerce, taxele și plățile Stripe și datele transferurilor bancare sunt colectate automat zilnic într-o foaie centrală Google Sheets. Sistemul verifică și reconciliază tranzacțiile, menținând o bază de date mereu actualizată și precisă.",
+      "result": "Rezultat:",
+      "resultText": "Proprietarul magazinului online are întotdeauna informații actuale și trebuie doar să trimită o singură foaie pregătită contabilității lunar. Ceea ce anterior dura câteva zile de muncă manuală acum durează 10 minute, în timp ce fiabilitatea datelor a ajuns la 100%."
+    },
+    "itBlog": {
+      "title": "Automatizarea generării de conținut pentru blogul furnizorului de servicii IT – redactarea lunară a blogului de 20 de ore redusă la 90 de minute",
+      "problem": "Problema:",
+      "problemText": "Specialistul în marketing al clientului meu furnizor de servicii IT petrecea 20-25 de ore lunar scriind postări tehnice pe blog. Cercetarea, scrierea și editarea manuală a tendințelor în infrastructură, actualizărilor de securitate și articolelor de bune practici durau 5-6 ore săptămânal. Menținerea calității tehnice consistente, optimizarea SEO și respectarea programului regulat de publicare erau o provocare continuă lucrând singur.",
+      "solution": "Soluție:",
+      "solutionText": "Am construit un flux de lucru specializat de generare a blogului pe platforma n8n care automatizează întregul proces de scriere a articolelor optimizat pentru subiecte IT. După introducerea simplă a unui subiect, sistemul cercetează automat surse tehnologice curente, știri din industrie și studii de caz relevante, creează o schiță structurată, apoi scrie postarea completă pe blog secțiune cu secțiune. Modelele AI rafinează conținutul tehnic în pași secvențiali, asigurând limbaj lizibil și acuratețe profesională.",
+      "result": "Rezultat:",
+      "resultText": "Timpul de producție a conținutului blogului a scăzut de la peste 20 de ore lunar la 90 de minute (economie de timp de 92%). Specialistul în marketing poate dedica cele 18 ore eliberate activităților strategice de marketing, generării de lead-uri și analizei clienților, în timp ce blogul continuă să publice conținut de calitate consistent. Ritmul automat de publicare și optimizarea SEO standardizată au crescut traficul organic al site-ului lor cu 45%."
+    }
+  }
+}

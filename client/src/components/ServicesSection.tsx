@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next';
+
 export default function ServicesSection() {
+  const { t } = useTranslation();
+
   const services = [
     {
       icon: (
@@ -6,8 +10,8 @@ export default function ServicesSection() {
           <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73z"/>
         </svg>
       ),
-      title: "AI‑bevezetés",
-      description: "üzleti célok, mérőszámok, stratégia, pilot → produkció."
+      titleKey: "services.aiImplementation.title",
+      descriptionKey: "services.aiImplementation.description"
     },
     {
       icon: (
@@ -17,8 +21,8 @@ export default function ServicesSection() {
           <circle cx="12" cy="12" r="2"/>
         </svg>
       ),
-      title: "Prompt‑stratégia & tréning",
-      description: "hatékony struktúrák, workflowk és sablonok."
+      titleKey: "services.promptStrategy.title",
+      descriptionKey: "services.promptStrategy.description"
     },
     {
       icon: (
@@ -27,8 +31,8 @@ export default function ServicesSection() {
           <path d="M12 6v6l4 2"/>
         </svg>
       ),
-      title: "Automatizálás",
-      description: "n8n / Make, Google Sheets, WooCommerce, Stripe, Help Scout."
+      titleKey: "services.automation.title",
+      descriptionKey: "services.automation.description"
     },
     {
       icon: (
@@ -39,8 +43,8 @@ export default function ServicesSection() {
           <path d="M8 17v-3"/>
         </svg>
       ),
-      title: "Mini eszközök",
-      description: "micro‑SaaS és belső toolok, gyors implementáció."
+      titleKey: "services.miniTools.title",
+      descriptionKey: "services.miniTools.description"
     }
   ];
 
@@ -49,7 +53,7 @@ export default function ServicesSection() {
       {services.map((service, index) => (
         <p key={index} data-testid={`service-${index}`}>
           {service.icon}
-          <strong>{service.title}</strong> — {service.description}
+          <strong>{t(service.titleKey)}</strong> — {t(service.descriptionKey)}
         </p>
       ))}
     </section>

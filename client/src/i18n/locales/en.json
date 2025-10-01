@@ -1,0 +1,58 @@
+{
+  "header": {
+    "name": "Csuszner Ferencz",
+    "description": "Your strategic partner in AI adoption: from prompt strategy through automation to AI workflow implementation—based on business goals, with measurable ROI, from pilot to scalable solutions."
+  },
+  "booking": {
+    "button": "Let's talk!",
+    "consultation": "30-minute free consultation"
+  },
+  "services": {
+    "aiImplementation": {
+      "title": "AI Implementation",
+      "description": "business goals, metrics, strategy, pilot → production."
+    },
+    "promptStrategy": {
+      "title": "Prompt Strategy & Training",
+      "description": "effective structures, workflows and templates."
+    },
+    "automation": {
+      "title": "Automation",
+      "description": "n8n / Make, Google Sheets, WooCommerce, Stripe, Help Scout."
+    },
+    "miniTools": {
+      "title": "Mini Tools",
+      "description": "micro-SaaS and internal tools, rapid implementation."
+    }
+  },
+  "caseStudies": {
+    "title": "Case Studies",
+    "physiotherapy": {
+      "title": "Automating a physiotherapy clinic's sales process – +62% more leads, 83% faster callbacks",
+      "problem": "Problem:",
+      "problemText": "Receptionists manually handled inquiries from ads. Callbacks averaged 45-60 minutes delay, resulting in lost leads while administration consumed too much time.",
+      "solution": "Solution:",
+      "solutionText": "The system automatically records lead data, sending instant notifications to receptionists and confirmation to prospects. Receptionists log call status. The system schedules follow-ups when needed. The clinic manager monitors response time and conversion rates in real-time. All powered by two Make.com integrations, two Google Sheets, and Google Apps Script code that seamlessly connect forms, notifications, and follow-ups.",
+      "result": "Result:",
+      "resultText": "Leads increased by 62%, callback time dropped from 48 to 8 minutes (83% improvement), while administrative burden on receptionists decreased by 80%."
+    },
+    "webshop": {
+      "title": "Centralizing e-commerce order and financial data – monthly reports in 10 minutes instead of days",
+      "problem": "Problem:",
+      "problemText": "The webshop collected order and financial data from multiple systems—WooCommerce, Stripe, and bank transfers—for accounting at month-end. Manual data collection and reconciliation previously took several days and often resulted in errors.",
+      "solution": "Solution:",
+      "solutionText": "We replaced the process with Make.com automations: WooCommerce orders, Stripe charges and payouts, and bank transfer data are automatically collected daily into a central Google Sheets spreadsheet. The system verifies and reconciles transactions, maintaining an always up-to-date and accurate database.",
+      "result": "Result:",
+      "resultText": "The webshop owner always has current information, and only needs to send one prepared spreadsheet to accounting monthly. What previously took several days of manual work now takes 10 minutes, while data reliability reached 100%."
+    },
+    "itBlog": {
+      "title": "Automating IT service provider blog content generation – monthly 20-hour blog writing reduced to 90 minutes",
+      "problem": "Problem:",
+      "problemText": "My IT service provider client's marketer spent 20-25 hours monthly writing technical blog posts. Manual research, writing, and editing of infrastructure trends, security updates, and best practice articles took 5-6 hours weekly. Maintaining consistent technical quality, SEO optimization, and regular publication schedule was an ongoing challenge working alone.",
+      "solution": "Solution:",
+      "solutionText": "We built a specialized blog generation workflow on the n8n platform that automates the entire article writing process optimized for IT topics. After simple topic input, the system automatically researches current technology sources, industry news, and relevant case studies, creates a structured outline, then writes the complete blog post section by section. AI models refine technical content in sequential steps, ensuring readable language and professional accuracy.",
+      "result": "Result:",
+      "resultText": "Blog content production time decreased from 20+ hours monthly to 90 minutes (92% time savings). The marketer can dedicate the freed 18 hours to strategic marketing activities, lead generation, and customer analysis, while the blog continues to publish consistent quality content. The automated publication rhythm and standardized SEO optimization increased their website's organic traffic by 45%."
+    }
+  }
+}

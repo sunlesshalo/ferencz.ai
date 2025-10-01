@@ -8,29 +8,40 @@ import CaseStudiesSection from '@/components/CaseStudiesSection';
 import ContactModal from '@/components/ContactModal';
 import Footer from '@/components/Footer';
 import ThemeToggle from '@/components/ThemeToggle';
+import LanguageSelector from '@/components/LanguageSelector';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Home() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const { language } = useLanguage();
+
+  // YouTube and Substack content only shown for languages other than EN/RO
+  const showSocialContent = language !== 'en' && language !== 'ro';
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="fixed top-4 right-4 z-10">
+      <div className="fixed top-4 right-4 z-10 flex items-center gap-4">
+        <LanguageSelector />
         <ThemeToggle />
       </div>
-      
+
       <main className="max-w-2xl mx-auto px-5 py-16 space-y-9">
         <Header />
         <div className="hero-entrance-delayed"><BookingSection /></div>
         <div className="hero-entrance-delayed"><ServicesSection /></div>
         <div className="hero-entrance-delayed"><CaseStudiesSection /></div>
-        <div className="hero-entrance-delayed"><FeaturedContent /></div>
-        <div className="hero-entrance-delayed"><YouTubeShortsSection /></div>
+        {showSocialContent && (
+          <>
+            <div className="hero-entrance-delayed"><FeaturedContent /></div>
+            <div className="hero-entrance-delayed"><YouTubeShortsSection /></div>
+          </>
+        )}
         <div className="hero-entrance-delayed"><Footer /></div>
       </main>
-      
-      <ContactModal 
-        isOpen={isContactModalOpen} 
-        onClose={() => setIsContactModalOpen(false)} 
+
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
       />
     </div>
   );

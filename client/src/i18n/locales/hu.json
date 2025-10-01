@@ -1,0 +1,58 @@
+{
+  "header": {
+    "name": "Csuszner Ferencz",
+    "description": "A stratégiai partnered az AI‑bevezetésben: prompt‑stratégiától az automatizálásokon át az AI‑munkafolyamatok bevezetéséig — üzleti célok alapján, mérhető ROI‑val, a pilottól a skálázható megoldásokig."
+  },
+  "booking": {
+    "button": "Beszéljünk!",
+    "consultation": "30 perces ingyenes konzultáció"
+  },
+  "services": {
+    "aiImplementation": {
+      "title": "AI‑bevezetés",
+      "description": "üzleti célok, mérőszámok, stratégia, pilot → produkció."
+    },
+    "promptStrategy": {
+      "title": "Prompt‑stratégia & tréning",
+      "description": "hatékony struktúrák, workflowk és sablonok."
+    },
+    "automation": {
+      "title": "Automatizálás",
+      "description": "n8n / Make, Google Sheets, WooCommerce, Stripe, Help Scout."
+    },
+    "miniTools": {
+      "title": "Mini eszközök",
+      "description": "micro‑SaaS és belső toolok, gyors implementáció."
+    }
+  },
+  "caseStudies": {
+    "title": "Esettanulmányok",
+    "physiotherapy": {
+      "title": "Fizioterápiás rendelő értékesítési folyamatának automatizálása – +62% több lead, 83%-kal gyorsabb visszahívás",
+      "problem": "Probléma:",
+      "problemText": "A rendelőben a recepciósok manuálisan kezelték a hirdetésekből érkező érdeklődőket. A visszahívások átlagosan 45–60 percet késtek, így számos lead elveszett, miközben az adminisztráció túl sok időt vitt el.",
+      "solution": "Megoldás:",
+      "solutionText": "A rendszerben a leadek adatai automatikusan rögzítésre kerülnek, erről a recepciósok azonnali értesítést, az érdeklődők pedig azonnali visszaigazolást kapnak. A hívások státuszát a recepciósok rögzítik. Ha szükséges, a rendszer további hívásokat ütemez. A rendelő vezetője valós időben monitorozza a reakcióidőt és a konverziós arányokat. Mindezt két Make.com integráció, két Google Sheets táblázat és Google Apps Script kód biztosítja, amelyek zökkenőmentesen összekapcsolják az űrlapokat, az értesítéseket és az utánkövetést.",
+      "result": "Eredmény:",
+      "resultText": "A leadek száma 62%-kal nőtt, a visszahívási idő 48 percről 8 percre csökkent (83%-os gyorsulás), miközben a recepciósok adminisztratív terhei 80%-kal mérséklődtek."
+    },
+    "webshop": {
+      "title": "Webáruház rendelési és pénzügyi adatainak központosítása – havi riport napok helyett 10 perc alatt",
+      "problem": "Probléma:",
+      "problemText": "A webáruház minden hónap végén több rendszerből – WooCommerce, Stripe és banki átutalások – gyűjtötte össze a könyvelésnek továbbítandó rendelési és pénzügyi adatokat. Az adatok manuális begyűjtése és összehangolása korábban akár több napon keresztül is húzódott, és gyakran eredményezett hibás adatokat.",
+      "solution": "Megoldás:",
+      "solutionText": "A folyamatot Make.com automatizációk váltottuk ki: a WooCommerce rendelések, a Stripe terhelések és kifizetések, valamint a banki átutalások adatait napi szinten egy központi Google Sheets táblázatba gyűjtjük automatikusam. A rendszer ellenőrzi és egyezteti a tranzakciókat, így mindig naprakész és pontos adatbázis áll rendelkezésre.",
+      "result": "Eredmény:",
+      "resultText": "A webáruház tulajdonosa mindig naprakész információval rendelkezik, és a könyvelésnek havonta már csak egyetlen, előkészített táblázatot kell elküldeni. A korábbi, akár több napon keresztül is húzódó manuális munka 10 percre rövidült, miközben az adatok megbízhatósága 100%-ra emelkedett."
+    },
+    "itBlog": {
+      "title": "IT szolgáltató blog tartalomgenerálásának automatizálása – havi 20 órás blogírás 90 percre csökkent",
+      "problem": "Probléma:",
+      "problemText": "Az IT szolgáltató ügyfelem marketingese havonta 20-25 órát töltött technikai blogbejegyzések írásával. Az infrastruktúra trendek, biztonsági frissítések és best practice cikkek manuális kutatása, megírása és szerkesztése heti szinten 5-6 órát vett igénybe. A konzisztens technikai minőség, SEO optimalizálás és a rendszeres publikálási ütemterv betartása egyedül dolgozva folyamatos kihívást jelentett.",
+      "solution": "Megoldás:",
+      "solutionText": "Az n8n platformon specializált blog-generálási workflow-t építettünk, amely automatizálja a teljes cikkírási folyamatot IT témákra optimalizálva. A rendszer egy egyszerű témabevitel után automatikusan kutat aktuális technológiai forrásokat, iparági híreket és releváns case study-kat, strukturált vázlatot készít, majd szakaszról szakaszra megírja a teljes blogbejegyzést. Az AI modellek egymásra épülő lépésekben finomítják a technikai tartalmat, biztosítva az olvasható nyelvezetet és a szakmai pontosságot.",
+      "result": "Eredmény:",
+      "resultText": "A blog tartalom-előállítási idő havi 20+ óráról 90 percre csökkent (92%-os időmegtakarítás). A marketinges a felszabadult 18 órát stratégiai marketing tevékenységekre, lead generálásra és ügyfélelemzésre fordíthatja, miközben a blogon továbbra is konzisztens minőségi tartalom jelenik meg. Az automatizált publikálási ritmus és a szabványosított SEO optimalizálás 45%-kal növelte a weboldaluk organikus forgalmát."
+    }
+  }
+}

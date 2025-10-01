@@ -1,7 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function BookingSection() {
+  const { t } = useTranslation();
   useEffect(() => {
     // Cal.com embed script
     const script = document.createElement('script');
@@ -33,10 +35,10 @@ export default function BookingSection() {
         data-cal-namespace="30min"
         data-cal-config='{"layout":"month_view"}'
       >
-        Beszéljünk!
+        {t('booking.button')}
       </Button>
       <p className="text-[10px] text-muted-foreground text-center max-w-[160px] leading-tight" data-testid="text-consultation-info">
-        30 perces ingyenes konzultáció
+        {t('booking.consultation')}
       </p>
     </section>
   );
